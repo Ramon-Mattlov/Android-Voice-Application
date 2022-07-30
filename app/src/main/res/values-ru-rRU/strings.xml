@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Нетвойс</string>
+
+    <string name="action_stop">Стор</string>
+    <string name="action_clear">Очистить</string>
+
+    <string name="request_hint">What are you interested in?</string>
+</resources>

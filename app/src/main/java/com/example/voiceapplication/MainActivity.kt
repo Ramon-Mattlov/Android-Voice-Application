@@ -2,24 +2,52 @@ package com.example.voiceapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
+
+    val TAG: String = "MainActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-<<<<<<< HEAD
+
+        initViews()
     }
+
+    fun initViews() {
+        val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+    }
+
+    //инициализация toolbar
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    //Обработчики события нажатия на кнопки меню
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_stop -> {
+                Log.d(TAG, "action_stop")
+                return true
+            }
+            R.id.action_clear -> {
+                Log.d(TAG, "action_clear")
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
 }
-=======
 
-        val name: String = "Nikita"
-        val surname: String = "Shumskii"
-        val age: Int  = 26
-        var heigth: Double = 180.0
 
-        val output: output = findViewById(R.id.output)
-        output.text = name
 
-    }
-}/
->>>>>>> 9be9067 (Project initialization)
+

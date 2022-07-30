@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Voice application</string>
+    <string name="app_name">NetVoice</string>
+
+    <string name="action_stop">Stop</string>
+    <string name="action_clear">Clear</string>
+
+    <string name="request_hint">What are you interested in?</string>
+
 </resources>
